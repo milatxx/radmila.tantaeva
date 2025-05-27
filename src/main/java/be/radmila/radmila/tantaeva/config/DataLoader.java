@@ -14,8 +14,8 @@ public class DataLoader {
     @Bean
     CommandLineRunner loadData(LocatieRepository locatieRepo, ActiviteitRepository activiteitRepo) {
         return args -> {
-            Locatie zaal = new Locatie(null, "Gemeentezaal", "Plein 1", 100);
-            Locatie cc = new Locatie(null, "Cultuurhuis", "Kunstlaan 5", 200);
+            Locatie zaal = new Locatie("Gemeentezaal", "Plein 1", 100);
+            Locatie cc = new Locatie("Cultuurhuis", "Kunstlaan 5", 200);
             locatieRepo.save(zaal);
             locatieRepo.save(cc);
 

@@ -13,4 +13,11 @@ public class Locatie {
     private String naam;
     private String adres;
     private int capaciteit;
+
+     //Constructor zonder ID 
+    public Locatie(String naam, String adres, int capaciteit) {
+        this.naam = naam;
+        this.adres = adres;
+        this.capaciteit = capaciteit;
+    }
 }

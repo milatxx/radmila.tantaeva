@@ -31,4 +31,13 @@ public class Activiteit {
     @ManyToOne
     @NotNull
     private Locatie locatie;
+
+    public Activiteit(LocalDateTime moment, String naam, String uitleg, String organisator, String contactEmail, Locatie locatie) {
+    this.moment = moment;
+    this.naam = naam;
+    this.uitleg = uitleg;
+    this.organisator = organisator;
+    this.contactEmail = contactEmail;
+    this.locatie = locatie;
+    }
 }
