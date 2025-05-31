@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" class="h-full bg-gray-100">
 <head>
   <title>Activiteit Details</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800">
+<body class="flex flex-col min-h-screen text-gray-800">
 
 <div th:insert="fragments/header :: header"></div>
 
-<main class="container mx-auto p-4">
+<main class="flex-grow max-w-4xl mx-auto py-8 px-4">
   <h1 class="text-2xl font-bold mb-4" th:text="${activiteit.naam}">Activiteit</h1>
 
   <p><strong>Organisator:</strong> <span th:text="${activiteit.organisator}"></span></p>
   <p><strong>Contact:</strong> <span th:text="${activiteit.contactEmail}"></span></p>
   <p><strong>Omschrijving:</strong> <span th:text="${activiteit.uitleg}"></span></p>
   <p><strong>Doelpubliek:</strong> <span th:text="${activiteit.doelpubliek}"></span></p>
-  <p><strong>Datum & tijd:</strong> <span th:text="${activiteit.moment}"></span></p>
+  <p><strong>Datum & tijd:</strong> <span th:text="${#temporals.format(activiteit.moment, 'dd/MM/yyyy HH:mm')}"></span></p>
 
   <h2 class="mt-4 text-xl font-semibold">Locatie</h2>
   <p><strong>Naam:</strong> <span th:text="${activiteit.locatie.naam}"></span></p>
