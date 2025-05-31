@@ -44,6 +44,12 @@
       </select>
     </div>
 
+    <div class="mb-4">
+      <label for="doelpubliek" class="block text-gray-700 font-bold mb-2">Doelpubliek</label>
+      <input type="text" id="doelpubliek" name="doelpubliek" th:field="*{doelpubliek}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+      <p th:if="${#fields.hasErrors('doelpubliek')}" th:errors="*{doelpubliek}" class="text-red-500 text-xs italic"></p>
+    </div>
+  
     <div>
       <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Opslaan</button>
     </div>
